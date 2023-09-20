@@ -40,4 +40,40 @@ class Payload {
     // Valor da transção (string)
     private $valorTransacao;
 
+    // retorna valor da chave pix
+    public function setChavePix($chavePix) {
+        $this->chavePix = $chavePix;
+        return $this;
+    }
+
+    // retorna a descrição do pix
+    public function setDescricaoPagamento($descricaoPagamento) {
+        $this->descricaoPagamento = $descricaoPagamento;
+        return $this;
+    }
+
+    // retorna o nome do titular da conta
+    public function setNomeTitular($nomeTitular) {
+        $this->nomeTitular = $nomeTitular;
+        return $this;
+    }
+
+    // retorna a cidade do titular da conta
+    public function setCidadeTitular($cidadeTitular) {
+        $this->cidadeTitular = $cidadeTitular;
+        return $this;
+    }
+
+    // retorna o id da transação pix
+    public function setIdTransacao($idTransacao) {
+        $this->idTransacao = $idTransacao;
+        return $this;
+    }
+
+    // retorna o valor da transação pix
+    public function setValorTransacao($valorTransacao) {
+        $this->valorTransacao = (string)number_format($valorTransacao, 2, '.', '');
+        return $this;
+    }
+
 }
